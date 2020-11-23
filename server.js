@@ -1,12 +1,14 @@
 require('dotenv').config();
 const API_PORT = process.env.PORT || 4000;
 const express = require('express');
+const ejsLayouts = require('express-ejs-layouts');
 
 const db = require('./models');
 
 const app = express();
 
 app.use(express.json());
+app.use(ejsLayouts);
 
 app.get('/', (req, res) => {
   res.send('Index route hit')
