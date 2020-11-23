@@ -7,11 +7,12 @@ const db = require('./models');
 
 const app = express();
 
-app.use(express.json());
+// app.use(express.json());
+app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 
 app.get('/', (req, res) => {
-  res.send('Index route hit')
+  res.render('index')
 })
 
 app.post('/signup', (req, res) => {
@@ -21,7 +22,7 @@ app.post('/signup', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {
-  res.send('Admin route hit')
+  res.render('admin')
 })
 
 // we need two routes 
