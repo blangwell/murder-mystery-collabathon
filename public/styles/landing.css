@@ -49,3 +49,30 @@ article {
     max-width: 20vw;
     margin-bottom: 20px;
 }
+
+form {
+    margin-bottom: 10vh;
+    padding: 15px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    max-width: 20vw;
+    margin-left: 10vw;
+}
+
+input[type=text] {
+    margin-bottom: 15px;
+}
+
+.btn {
+    align-self: flex-start;
+    background-color: var(--dark-gold);
+    padding: 10px 25px;
+}
