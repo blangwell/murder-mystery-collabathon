@@ -16,11 +16,15 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+app.get('/confirm', (req, res) => {
+  res.render('confirm')
+})
+
 app.post('/signup', (req, res) => {
   console.log(req.body);
   db.User.create({firstName: req.body.firstName, email: req.body.email})
-  .then(created => res.status(201).send(created))
-  .catch(err => res.status(503).send(err));
+  .then(created => res.render('confirm', {created}))
+  .catch(err => res.render('error', {err}));
 })
 
 app.get('/admin', (req, res) => {
