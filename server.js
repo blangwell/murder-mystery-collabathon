@@ -24,7 +24,7 @@ app.post('/signup', (req, res) => {
 
 app.get('/admin', (req, res) => {
   db.User.find()
-  .then(users => res.render('admin', {users}))
+  .then(users => res.render('admin', {users, count: users.length}))
   .catch(err => console.log(err))
 })
 
