@@ -17,9 +17,17 @@ h1, h3, h5 {
 header {
     height: 10vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    padding: 0 5vw;
+}
+
+.meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 5vw;
 }
 
 #about {
@@ -128,9 +136,13 @@ footer {
     font-size: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+    #about-copy {
+        width: 90vw;
+        font-size: 80%;
+    }
+
     #themes {
-        height: 100vh;
         padding: 0 10px;
     }
 
