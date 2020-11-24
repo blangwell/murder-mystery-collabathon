@@ -1,7 +1,27 @@
-<h1>Admin</h1>
-<p>here da users</p>
+<div id="admin">
 
-<% users.forEach(u => { %>
-<%= u.firstName %>
-<%= u.email %>
-<% })%>
+</div>
+<h1>Admin Panel</h1>
+<h3>Currently Subscribed</h3>
+
+<div id="active-users">
+
+  <table class="user-table">
+
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+
+    <% users.forEach(u => { %>
+
+        <tr class="item-row">
+          <td><%= u.firstName %></td>
+          <td><%= u.email %></td>
+        </tr>
+
+    <% })%>
+
+  </table>
+
+</div>

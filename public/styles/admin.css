@@ -1,0 +1,29 @@
+#active-users {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.user-table {
+  text-align: left;
+  border: 5px solid grey;
+  border-radius: 50px;
+}
+
+.user-table th {
+  padding: 10px;
+  background-color: rgb(176, 176, 176);
+  font-size: 20px;
+}
+
+.user-table tr td{
+  padding: 20px;
+  border: 1px solid grey;
+  font-size: 18px;
+}
+
+@media only screen and (min-device-width: 600px) {
+  .user-table {
+    margin: 50px;
+  }
+}
