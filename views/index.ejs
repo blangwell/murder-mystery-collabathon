@@ -3,9 +3,18 @@
 </header>
 
 <section id="about">
-    <h5>So you've found The Castle...</h5>
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore iste assumenda tenetur pariatur aliquid quam facere, id earum nam sunt laudantium error corporis temporibus et vitae, quibusdam ea beatae.</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="/images/placeholder-landscape.png" alt="" class="about-img">
+            </div>
+            <div class="col about-copy">
+                <h5>So you've found The Castle...</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus inventore iste assumenda tenetur pariatur aliquid quam facere, id earum nam sunt laudantium error corporis temporibus et vitae, quibusdam ea beatae.</p>
+            </div>
+        </div>
+    </div>
+    
 </section>
 
 
@@ -64,9 +73,15 @@
     <p>Sign up for our newsletter to get more details - and exclusive deals</p>
 
 <form action="/signup" method="POST">
-    <input type="text" name="firstName" required>
-    <input type="email" name="email" required>
-    <input type="submit" value="Sign Up">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" id="name-input" name="firstName" placeholder="First Name" required>
+            <input type="email" class="form-control" id="email-input" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="col">
+            <input type="submit" value="Sign Up">
+        </div>
+    </div>
 </form>
 
 </section>
