@@ -16,20 +16,19 @@ h1, h3, h5 {
 }
 
 header {
-    height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/placeholder-landscape.png');
     margin-bottom: 20px;
 }
 
 #about {
+    height: 50vh;
     margin-bottom: 20px;
-}
+    background-image: url('../images/about.jpg');
+    background-size: cover;
+    background-position: center;
 
-.about-img {
-    max-width: 30vw;
 }
 
 .about-copy {
@@ -75,4 +74,22 @@ input[type=text] {
     align-self: flex-start;
     background-color: var(--dark-gold);
     padding: 10px 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    #themes-mobile {
+        display: block;
+    }
+    #themes-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #themes-mobile {
+        display: none;
+    }
+    #themes-desktop {
+        display: block;
+    }
 }
