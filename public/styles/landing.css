@@ -1,7 +1,6 @@
 :root {
-    --off-white: #e5e5e5;
-    --dark-gold: #d4af37;
-    --light-gold: #d7ba35;
+    --off-white: #f1f1f1;
+    --gold: #eddeac;
     --off-black: #272727;
 }
 
@@ -16,20 +15,19 @@ h1, h3, h5 {
 }
 
 header {
-    height: 20vh;
+    height: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-image: url('../images/placeholder-landscape.png');
     margin-bottom: 20px;
 }
 
 #about {
-    margin-bottom: 20px;
-}
-
-.about-img {
-    max-width: 30vw;
+    height: 50vh;
+    background-image: url('../images/about.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid var(--gold);
 }
 
 .about-copy {
@@ -39,6 +37,15 @@ header {
     align-items: center;
 }
 
+#themes-desktop, #themes-mobile, #custom-theme {
+    background-color: var(--off-black);
+    color: var(--off-white);
+}
+
+#themes-desktop, #themes-mobile {
+    padding-top: 25px;
+}
+
 article {
     display: flex;
     flex-direction: column;
@@ -46,8 +53,14 @@ article {
 }
 
 .theme-img {
-    max-width: 20vw;
+    object-fit: cover;
+    width: 15vw;
+    height: 15vw;
     margin-bottom: 20px;
+}
+
+#newsletter {
+    background-color: var(--gold);
 }
 
 form {
@@ -73,10 +86,26 @@ input[type=text] {
 
 .btn {
     align-self: flex-start;
-    background-color: var(--dark-gold);
+    background-color: var(--off-white);
     padding: 10px 25px;
 }
 
+@media only screen and (max-width: 768px) {
+    #themes-mobile {
+        display: block;
+    }
+    #themes-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #themes-mobile {
+        display: none;
+    }
+    #themes-desktop {
+        display: block;
+    }
 #confirm {
     height: 100vh;
     display: flex;
