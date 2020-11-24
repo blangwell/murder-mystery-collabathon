@@ -1,27 +1,26 @@
 <div id="admin">
 
-</div>
-<h1>Admin Panel</h1>
-<h3>Currently Subscribed</h3>
-
-<div id="active-users">
-
-  <table class="user-table">
-
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-    </tr>
-
-    <% users.forEach(u => { %>
-
+  <h1>Admin Panel</h1>
+  <h3>Currently Subscribed</h3>
+  <div id="active-users">
+    
+    <table class="user-table">
+      
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      
+      <% users.forEach(u => { %>
+        
         <tr class="item-row">
           <td><%= u.firstName %></td>
           <td><%= u.email %></td>
         </tr>
-
-    <% })%>
-
-  </table>
-
-</div>
+        
+        <% })%>
+        
+      </table>
+      
+    </div>
+  </div>
