@@ -20,11 +20,15 @@ app.get('/confirm', (req, res) => {
   res.render('confirm')
 })
 
+app.get('/error', (req, res) => {
+  res.render('error')
+})
+
 app.post('/signup', (req, res) => {
   console.log(req.body);
   db.User.create({firstName: req.body.firstName, email: req.body.email})
   .then(created => res.render('confirm', {created}))
-  .catch(err => res.render('error', {err}));
+  .catch(err => res.redirect('error'));
 })
 
 app.get('/admin', (req, res) => {

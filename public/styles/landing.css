@@ -132,6 +132,7 @@ footer {
     flex-direction: column;
 }
 
+
 #confirm {
     height: 100vh;
     display: flex;
@@ -191,14 +192,5 @@ footer {
 
     .btn {
         font-size: 80%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    #themes-mobile {
-        display: none;
-    }
-    #themes-desktop {
-        display: block;
     }
 }
