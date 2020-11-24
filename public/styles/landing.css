@@ -90,22 +90,6 @@ input[type=text] {
     padding: 10px 25px;
 }
 
-@media only screen and (max-width: 768px) {
-    #themes-mobile {
-        display: block;
-    }
-    #themes-desktop {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    #themes-mobile {
-        display: none;
-    }
-    #themes-desktop {
-        display: block;
-    }
 #confirm {
     height: 100vh;
     display: flex;
@@ -121,4 +105,13 @@ input[type=text] {
     right: 50px;
     color: black;
     font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    #themes-mobile {
+        display: none;
+    }
+    #themes-desktop {
+        display: block;
+    }
 }
