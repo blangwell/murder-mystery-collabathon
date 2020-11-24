@@ -30,26 +30,39 @@ header {
     border-bottom: 1px solid var(--gold);
 }
 
-.about-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#about-copy {
+    position: relative;
+    width: 38vw;
+    background-color: #27272788;
+    color: var(--off-white);
+    text-align: left;
+    left: 5vw;
+    top: 25vh;
+    padding: 10px;
 }
 
-#themes-desktop, #themes-mobile, #custom-theme {
+#about-copy p {
+    margin-bottom: 5px;
+}
+
+#themes {
     background-color: var(--off-black);
     color: var(--off-white);
-}
-
-#themes-desktop, #themes-mobile {
-    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 article {
+    height: 50vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+}
+
+.theme-row {
+    margin-bottom: 25px;
 }
 
 .theme-img {
@@ -61,10 +74,15 @@ article {
 
 #newsletter {
     background-color: var(--gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0 10vh;
 }
 
 form {
-    margin-bottom: 10vh;
+    width: 45vw;
     padding: 15px;
 }
 
@@ -75,11 +93,6 @@ form {
     align-items: center;
 }
 
-.form-control {
-    max-width: 20vw;
-    margin-left: 10vw;
-}
-
 input[type=text] {
     margin-bottom: 15px;
 }
@@ -87,12 +100,29 @@ input[type=text] {
 .btn {
     align-self: flex-start;
     background-color: var(--off-white);
-    padding: 10px 25px;
+}
+
+footer {
+    padding: 40px 0;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 768px) {
+    #themes {
+        height: 100vh;
+        padding: 0 10px;
+    }
+
     #themes-mobile {
-        display: block;
+        display: flex;
+    }
+    .theme-img {
+        width: 30vh;
+        height: 30vh;
     }
     #themes-desktop {
         display: none;
