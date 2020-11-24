@@ -34,7 +34,7 @@ header {
     height: 50vh;
     background-image: url('../images/about.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: 0% 30%;
     border-bottom: 1px solid var(--gold);
 }
 
@@ -59,6 +59,10 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+#theme-title{
+    padding: 20px 0;
 }
 
 article {
@@ -90,8 +94,17 @@ article {
 }
 
 form {
-    width: 45vw;
+    display: flex;
+    justify-content: center;
     padding: 15px;
+}
+
+input[type=text], input[type=email] {
+    width: 125% !important;
+}
+
+.form-btn {
+    margin-left: 50px;
 }
 
 .form-column {
@@ -137,9 +150,15 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
+    #about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     #about-copy {
         width: 90vw;
         font-size: 80%;
+        position: static;
     }
 
     #themes {
@@ -150,11 +169,28 @@ footer {
         display: flex;
     }
     .theme-img {
-        width: 30vh;
-        height: 30vh;
+        width: 20vh;
+        height: 20vh;
     }
     #themes-desktop {
         display: none;
+    }
+
+    .carousel-content {
+        margin-bottom: 50px;
+    }
+
+    form {
+        width: 80vw;
+    }
+
+    input[type=text], input[type=email] {
+        font-size: 80% !important;
+        width: 125% !important;
+    }
+
+    .btn {
+        font-size: 80%;
     }
 }
 
