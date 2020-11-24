@@ -7,17 +7,18 @@ const db = require('./models');
 
 const app = express();
 
-// app.use(express.json());
 app.set('view engine', 'ejs');
 app.use(ejsLayouts);
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
   res.render('index')
 })
 
 app.post('/signup', (req, res) => {
-  db.User.create({firstName: 'Barent', email: 'barent@email.fart'})
+  console.log(req.body);
+  db.User.create({firstName: req.body.firstName, email: req.body.email})
   .then(created => res.status(201).send(created))
   .catch(err => res.status(503).send(err));
 })
