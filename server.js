@@ -22,7 +22,11 @@ app.post('/signup', (req, res) => {
 })
 
 app.get('/admin', (req, res) => {
-  res.render('admin')
+  // context = {users: db.User.find()}
+  db.User.find()
+  .then(users => res.render('admin', {users}))
+  .catch(err => console.log(err))
+  // res.render('admin', context)
 })
 
 // we need two routes 
