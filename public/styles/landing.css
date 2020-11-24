@@ -1,0 +1,78 @@
+:root {
+    --off-white: #e5e5e5;
+    --dark-gold: #d4af37;
+    --light-gold: #d7ba35;
+    --off-black: #272727;
+}
+
+body {
+    background-color: var(--off-white);
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1, h3, h5 {
+    font-family: 'Playfair Display', serif;
+}
+
+header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/placeholder-landscape.png');
+    margin-bottom: 20px;
+}
+
+#about {
+    margin-bottom: 20px;
+}
+
+.about-img {
+    max-width: 30vw;
+}
+
+.about-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme-img {
+    max-width: 20vw;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 10vh;
+    padding: 15px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control {
+    max-width: 20vw;
+    margin-left: 10vw;
+}
+
+input[type=text] {
+    margin-bottom: 15px;
+}
+
+.btn {
+    align-self: flex-start;
+    background-color: var(--dark-gold);
+    padding: 10px 25px;
+}
